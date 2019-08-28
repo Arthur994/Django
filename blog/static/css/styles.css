@@ -59,3 +59,52 @@
 	margin: auto;
 	display: block;
 }
+
+.logged-in-p {
+	background-color: #000;
+	color: #FFF;
+	padding: 10px;
+	width: 100%;
+}
+
+.logged-in-p span {
+	display: block;
+	float: right;
+}
+
+.logged-in-p a {
+	color: #ffe484;
+}
+
+.container .step-links {
+	display: block;
+    width: 200px;
+    margin: 30px auto;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    padding-top: 15px;
+}
+
+body footer {
+	height: 200px;
+	position: relative;
+	border-top: 3px solid #00A572;
+}
+
+.step-links a {
+	color: #00A572;
+	transition: .5s;
+}
+
+.step-links a:hover {
+	color: #000;
+}
+
+footer .copy {
+	position: absolute;
+    bottom: 15px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
