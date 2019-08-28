@@ -44,6 +44,13 @@
 	border-color: #29AB87;
 }
 
+.card .btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    display: block;
+}
+
 .card .btn-primary:hover {
 	background-color: #FFF;
 	color: #29AB87;

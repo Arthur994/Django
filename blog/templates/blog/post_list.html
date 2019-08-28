@@ -19,7 +19,7 @@
                         <p>Criado em {{ post.created_at }} por {{ post.author }}</p>
                         <a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-primary">Ver o post completo</a>
                         {% if user.is_authenticated %}
-                        <p><a href="{% url 'blog:post_update' post.id %}">Editar post</a></p>
+                        <p><a href="{% url 'blog:post_update' post.id %}" class="btn btn-warning">Editar post</a></p>
                         {% endif %}
                     </div>
                 </div>
