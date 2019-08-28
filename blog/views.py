@@ -38,5 +38,35 @@ def post_create(request):
             new_post = Post(title=post_title, slug=post_slug, body=post_body, author=post_author, status=post_status)
             new_post.save()
             return redirect('blog:post_list')
+        else:
+            return render(request, 'blog/add_post.html', {'form' : form})
     elif(request.method == 'GET'):
-        return render(request, 'blog/add_post.html', {'form': form})
+        return render(request, 'blog/add_post.html', {'form' : form})
+
+@login_required
+def post_update(request,id):
+    
+    post = get_object_or_404(Post, pk=id)
+        
+    form = PostForm(instance=post)
+
+    if(request.method == 'POST'):
+        form = PostForm(request.POST, instance = post)
+
+        if(form.is_valid()):
+            post = form.save(commit=False)
+            
+            post_title = form.cleaned_data['title']
+            post_slug = form.cleaned_data['slug']
+            post_body = form.cleaned_data['body']
+            post_author = form.cleaned_data['author']
+            post_status = form.cleaned_data['status']
+
+            post.save()
+            return redirect('blog:post_list')
+        else:
+            return render(request, 'blog/edit_post.html',{'form':form,'post':post})
+
+
+    elif(request.method == 'GET'):
+        return render(request, 'blog/edit_post.html', {'form': form,'post':post})
