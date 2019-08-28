@@ -70,3 +70,9 @@ def post_update(request,id):
 
     elif(request.method == 'GET'):
         return render(request, 'blog/edit_post.html', {'form': form,'post':post})
+
+@login_required
+def post_delete(request,id):
+    post = get_object_or_404(Post,pk=id)
+    post.delete()
+    return redirect('blog:post_list')
