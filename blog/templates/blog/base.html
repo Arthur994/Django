@@ -45,6 +45,9 @@
       Olá {{ user.username }} seja bem vindo.
       <span class="sair"><a href="{% url 'logout' %}">Sair</a></span>
     </p>
+     <div class="submenu-auth">
+        <span><a href="{% url 'blog:post_create' %}">Adicionar post</a></span>
+    </div>
     {% endif %}
     {% block content %}
     {% endblock %}
