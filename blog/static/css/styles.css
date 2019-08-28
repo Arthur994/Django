@@ -68,8 +68,8 @@
 }
 
 .logged-in-p {
-	background-color: #000;
-	color: #FFF;
+	background-color: #29AB87;
+	color: #000;
 	padding: 10px;
 	width: 100%;
 }
@@ -114,4 +114,10 @@ footer .copy {
     margin: auto;
     width: 100%;
     text-align: center;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    /* margin-bottom: 1rem; */
 }
