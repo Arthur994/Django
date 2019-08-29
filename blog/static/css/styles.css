@@ -94,7 +94,8 @@
 }
 
 body footer {
-	height: 200px;
+	height: 60px;
+	width: 100%;
 	position: relative;
 	border-top: 3px solid #00A572;
 }

@@ -46,7 +46,7 @@
       <span class="sair"><a href="{% url 'logout' %}">Sair</a></span>
     </p>
      <div class="submenu-auth" style="background: #29AB87";>
-        <span><a href="{% url 'blog:post_create' %}">Adicionar post</a></span>
+        <span><a href="{% url 'blog:post_create' %}" class="btn btn-primary">Adicionar post</a></span>
     </div>
     {% endif %}
     {% block content %}
@@ -54,7 +54,7 @@
   </div>
   <footer>
     <span class="copy">&copy; Copyright 2019, Django blog</span>
-</footer>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
